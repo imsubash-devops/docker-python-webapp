@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the header */
+header {
+  background-color: #333;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #fff;
+}
+
+/* Create two columns/boxes that float next to each other */
+nav {
+  float: left;
+  width: 30%;
+  background: #444;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+  transition: width 0.5s;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  min-height: 100vh;
+  transition: width 0.5s;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+  }
+}
+
+/* Smooth transition for width change on larger screens */
+@media (min-width: 601px) {
+  section:hover nav {
+    width: 10%;
+  }
+
+  section:hover article {
+    width: 90%;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>DevOps Learner Subash</h2>
+  <h3>Used the code sample for learning the DevOps project practically</h3>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="https://www.youtube.com/@subash89xyz">YouTube</a></li>
+      <li><a href="https://www.linkedin.com/in/subash/">LinkedIn</a></li>
+      <li><a href="https://telegram.me/iamsubash">Telegram</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Gratitude</h1>
+    <p>Learning DevOps tools for strong foundational knowledge and practical understanding</p>
+    <p>Thankful to Abhisek sir and Sagar sir for the guidance</p>
+  </article>
+</section>
+
+<footer>
+  <p>@SUBASHNEUPANE</p>
+</footer>
+
+</body>
+</html>
+
